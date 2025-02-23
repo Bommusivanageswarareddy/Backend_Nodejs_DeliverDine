@@ -5,7 +5,7 @@ const dotEnv = require('dotenv');
 
 dotEnv.config();
 
-const secretKey = process.env.WhatIsYourName
+const secretKey = process.env.Jsonwebtokenlogin;
 
 
 
@@ -67,7 +67,7 @@ const getAllVendors = async(req, res) => {
 
 
 const getVendorById = async(req, res) => {
-    const vendorId = req.params.apple;
+    const vendorId = req.params._id;
 
     try {
         const vendor = await Vendor.findById(vendorId).populate('firm');
